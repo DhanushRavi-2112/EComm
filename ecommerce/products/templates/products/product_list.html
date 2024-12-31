@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Available Products</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            <strong>{{product.name}}</strong><br>
+            {{product.description}}<br>
+            Price:${{product.price}}
+            Stock:{{product.stock}}
+        </li>
+        {% empty %}
+        <li>No Products Available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
